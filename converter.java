@@ -27,7 +27,8 @@ class converter {
             System.out.println(base_converter(type, conversion, number));
         } else if (answer.equalsIgnoreCase("r")){
             System.out.print("Enter file name with extension: ");
-            BufferedImage image_file = ImageIO.read(new File("images/" + scanner.nextLine()));
+            String image_name = scanner.nextLine();
+            BufferedImage image_file = ImageIO.read(new File("images/" + image_name));
             image_reader(image_file, image_name);
         } else if(answer.equalsIgnoreCase("w")){
             System.out.print("Enter txt file with colors: ");
@@ -49,9 +50,10 @@ class converter {
     // Number Base Converter
     public static int decimal_converter(String number, String type){
         return switch (type.toLowerCase()){
-            case "b" -> Integer.parseInt(number, 2);
-            case "o" -> Integer.parseInt(number, 8);
-            default -> Integer.parseInt(number, 16);
+            case "b" -> Integer.parseUnsignedInt(number, 2);
+            case "o" -> Integer.parseUnsignedInt(number, 8);
+            case "h" -> Integer.parseUnsignedInt(number, 16);
+            default -> 0;
         };
     }
 
