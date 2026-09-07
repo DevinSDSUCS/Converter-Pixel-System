@@ -1,60 +1,20 @@
 C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? W
-Enter txt file with colors: gojo.txt
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: 0
-Enter the base type (D/B/O/H): D
-Enter the conversion type (B/D/O/H): B
-Binary Equivalent: 0
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: B
-Enter the base type (D/B/O/H): O
-Enter the conversion type (B/D/O/H): 0
-Not a valid conversion type
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
 Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
 Enter your number: 0
 Enter the base type (D/B/O/H): B
-Enter the conversion type (B/D/O/H): D
+Enter the conversion type (D/B/O/H): D
 Decimal Equivalent: 0
 
 C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
 Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
 Enter your number: 0
-Enter the base type (D/B/O/H): D
-Enter the conversion type (B/D/O/H): O
-Octal Equivalent: 0
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: 0
-Enter the base type (D/B/O/H): D
-Enter the conversion type (B/D/O/H): H
-Hexadecimal Equivalent: 0
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: 0
-Enter the base type (D/B/O/H): B
-Enter the conversion type (B/D/O/H): O
-Octal Equivalent: 0
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: 0
-Enter the base type (D/B/O/H): B
-Enter the conversion type (B/D/O/H): H
-Hexadecimal Equivalent: 0
-
-C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
-Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
-Enter your number: 0
 Enter the base type (D/B/O/H): O
-Enter the conversion type (B/D/O/H): H
+Enter the conversion type (D/B/O/H): H
 Hexadecimal Equivalent: 0
+
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
+Enter your number: 0
+Enter the base type (D/B/O/H): H
+Enter the conversion type (D/B/O/H): B
+Binary Equivalent: 0
