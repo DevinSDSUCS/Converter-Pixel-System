@@ -1,0 +1,34 @@
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
+Enter your number: 11111111
+Enter the base type (D/B/O/H): B
+Enter the conversion type (B/D/O/H): O
+Octal Equivalent: 377
+
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
+Enter your number: FF
+Enter the base type (D/B/O/H): H
+Enter the conversion type (B/D/O/H): B
+Binary Equivalent: 11111111
+
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
+Enter your number: 11111111
+Enter the base type (D/B/O/H): B
+Enter the conversion type (B/D/O/H): D
+Decimal Equivalent: 255
+
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? N
+Enter your number: -1
+Enter the base type (D/B/O/H): D
+Enter the conversion type (B/D/O/H): B
+Binary Equivalent: 11111111111111111111111111111111
+
+C:\Users\devin\OneDrive\Desktop\CS 240\Code Stuff\Converter>java converter.java
+Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? n
+Enter your number: 10000000
+Enter the base type (D/B/O/H): b
+Enter the conversion type (B/D/O/H): d
+Decimal Equivalent: 128
