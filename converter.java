@@ -1,0 +1,101 @@
+import java.util.Scanner;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.io.FileNotFoundException;
+
+class converter {
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ascii, Number Base, Image Reader, or Image Writer? (A/N/R/W)? ");
+        String answer = scanner.nextLine();
+        if(answer.equalsIgnoreCase("a")){
+            System.out.print("Enter text: ");
+            ascii_to_decimal(scanner.nextLine());
+        } else if (answer.equalsIgnoreCase("n")) {
+            System.out.print("Enter your number: ");
+            String number = scanner.nextLine();
+            System.out.print("Enter the base type (D/B/O/H): ");
+            String type = scanner.nextLine();
+            System.out.print("Enter the conversion type (D/B/O/H): ");
+            String conversion = scanner.nextLine();
+            System.out.println(base_converter(type, conversion, number));
+        } else if (answer.equalsIgnoreCase("r")){
+            System.out.print("Enter file name with extension: ");
+            BufferedImage image_file = ImageIO.read(new File("images/" + scanner.nextLine()));
+            image_reader(image_file, image_name);
+        } else if(answer.equalsIgnoreCase("w")){
+            System.out.print("Enter txt file with colors: ");
+            File file_name = new File(scanner.nextLine());
+            ImageIO.write(image_writer(file_name), "png", new File("output.png"));
+        } else {
+            scanner.close();
+            System.out.println("Exiting...");
+        }
+    }
+
+    // Ascii to Decimal
+    public static void ascii_to_decimal(String word){
+        for(char character : word.toCharArray()){
+            System.out.print((int) character + " ");
+        }
+    }
+
+    // Number Base Converter
+    public static int decimal_converter(String number, String type){
+        return switch (type.toLowerCase()){
+            case "b" -> Integer.parseInt(number, 2);
+            case "o" -> Integer.parseInt(number, 8);
+            default -> Integer.parseInt(number, 16);
+        };
+    }
+
+    public static String base_converter(String type, String conversion, String number){
+        return switch (conversion.toLowerCase()){
+            case "d" -> "Decimal Equivalent: " + decimal_converter(number, type);
+            case "b" -> "Binary Equivalent: " + Integer.toBinaryString(decimal_converter(number, type));
+            case "o" -> "Octal Equivalent: " + Integer.toOctalString(decimal_converter(number, type));
+            case "h" -> "Hexadecimal Equivalent: " + Integer.toHexString(decimal_converter(number, type));
+            default -> "Not a valid conversion type";
+        };
+    }
+
+    // Image Reader
+    public static void image_reader(BufferedImage image, String name){
+        String textFileName = name.substring(0, name.indexOf(".")) + ".txt";
+        try(PrintWriter writer = new PrintWriter(textFileName, StandardCharsets.UTF_8)){
+            writer.println(image.getHeight());
+            writer.println(image.getWidth());
+            for(int j = 0; j < image.getHeight(); j++){
+                for(int i = 0; i < image.getWidth(); i++){
+                    int pixel = image.getRGB(i, j);
+                    System.out.println(pixel);
+                    writer.println(pixel);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error creating or writing to file: " + e.getMessage());
+        }
+    }
+
+    // Image Writer
+    public static BufferedImage image_writer(File file_name) throws FileNotFoundException {
+        Scanner scnnr = new Scanner(file_name);
+        int height = scnnr.nextInt();
+        int width = scnnr.nextInt();
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        for(int j = 0; j < height; j++){
+            for(int i = 0; i < width; i++){
+                int color = scnnr.nextInt();
+                image.setRGB(i, j, color);
+            }
+        }
+        scnnr.close();
+        return image;
+    }
+}
